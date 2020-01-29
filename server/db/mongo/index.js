@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/echoPark', {
+// database connection port
+mongoose.connect('mongodb://localhost:27017/echoPark', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });

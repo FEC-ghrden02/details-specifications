@@ -13,4 +13,4 @@ var OffRoadCapabilitySchema = new Schema({
     }
 })
 
-module.export = mongoose.model('OffRoadCapability', OffRoadCapabilitySchema);
+module.exports = mongoose.model('OffRoadCapability', OffRoadCapabilitySchema);

@@ -3,23 +3,23 @@ var Schema = mongoose.Schema;
 var Vehicle = require('./vehicle');
 
 var ConvenienceFeatSchema = new Schema ({
-    tilt_steering_wheel: Boolean,
-    telescoping_steering_wheel: Boolean,
-    ac: Boolean,
-    garage_dr_transmiter: Boolean,
-    front_beverage_holder: Boolean,
-    spd_control: Boolean,
-    illuminated_entry: Boolean,
-    rear_bev_holder: Boolean,
-    trunk_auto_latch: Boolean,
-    pwr_wnds: Boolean,
-    one_tocuh_down_wnds: Boolean,
-    emergency_comm_sys: Boolean,
-    remote_keyless_entry: Boolean,
+    tilt_steering_wheel: String,
+    telescoping_steering_wheel: String,
+    ac: String,
+    garage_dr_transmiter: String,
+    front_beverage_holder: String,
+    spd_control: String,
+    illuminated_entry: String,
+    rear_bev_holder: String,
+    trunk_auto_latch: String,
+    pwr_wnds: String,
+    one_tocuh_down_wnds: String,
+    emergency_comm_sys: String,
+    remote_keyless_entry: String,
     vehicle: {
         type: Schema.Types.ObjectId,
         ref: 'Vehicle'
     }
 });
 
-module.export = mongoose.model('ConvenienceFeature', ConvenienceFeatSchema);
+module.exports = mongoose.model('ConvenienceFeature', ConvenienceFeatSchema);
