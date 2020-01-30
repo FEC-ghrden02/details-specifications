@@ -4,6 +4,7 @@ const app = express();
 // const db = require('./db/orm/index'); // ORM DB
 const db = require('./db/mongo/index'); // NON-ORM DB
 const Vehicle = require('./db/mongo/vehicle');
+const ConvenienceFeature = require('./db/mongo/convenience');
 
 // directory for static files
 app.use(express.static(__dirname + '/../client/dist'));
@@ -16,8 +17,13 @@ app.get('/api/vehicles', function (req, res){
     });
 });
 
-app.get('/detailed-specs', function (req, res){
-})
+app.get('/api/convenience-specs', function (req, res){
+    console.log('Request recieved from React')
+    // fix query to remove empty fields
+    ConvenienceFeature.find({}, function (err, docs){
+        res.json(docs);
+    });
+});
 
 // connection to localhost
 const PORT = process.env.PORT || 3000;
