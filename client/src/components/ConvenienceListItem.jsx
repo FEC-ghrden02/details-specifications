@@ -1,16 +1,18 @@
 import React from 'react';
 
 const ConvenienceListItem = (props) => {
-    console.log('Props @ CLI ', props);
-    // console.log('Props.length @ CLI ', Object.keys(props).length);
-    // console.log('Props[#] @ CLI ', props[1]);
-    return (
-        <li>
-            <span className="title">
-                {props.value}
-            </span>
-        </li>
-    )
+    // prevent rendering empty elements
+    if (props.value.length !== 0 ){
+        return (
+            <li>
+                <span className="title">
+                    {props.value}
+                </span>
+            </li>
+        )
+    } else {
+        return null;
+    }
 };
 
 export default ConvenienceListItem;

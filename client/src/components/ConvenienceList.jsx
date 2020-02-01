@@ -2,15 +2,19 @@ import React from 'react';
 import ConvenienceListItem from './ConvenienceListItem.jsx';
 
 const ConvenienceList = (props) => {
-    console.log('@ convenience: ', props.convenienceDetails);
     
     // from props.convenienceDetails create an array of objs
     const reformattedProps = Object.keys(props.convenienceDetails).map(key => {
-        console.log(`This are the key`,key, props.convenienceDetails[key]);
+        // console.log(`This are the key`,key, props.convenienceDetails[key]);
         let rObj = {};
         // to give every obj an id=index
         rObj.key = key;
         rObj.value = props.convenienceDetails[key];
+        // set value to empty string to be removed of displaying in ConvenienceListItem
+        // maybe can be done through query
+        if(rObj.key === '_id' || rObj.key === 'vehicle' || rObj.key === '__v') {
+            rObj.value = '';
+        }
         return rObj;
     });
     
@@ -33,8 +37,5 @@ const ConvenienceList = (props) => {
         </div>
     );
 }
-/*   <ConvenienceListItem
-key={props.convenienceDetails._id}
-tilt_steering_wheel={props.convenienceDetails.tilt_steering_wheel}                   
-/>*/
+
 export default ConvenienceList;
