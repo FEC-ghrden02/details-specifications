@@ -60,9 +60,9 @@ Vehicle.createCollection().then(function(collection){
             console.log('EntmtFeat collection created');
         
             const EntmtFeatExample = new EntmtFeat ({
-                smrt_device_integration: ['AppLink', 'Radio data system'],
+                smrt_device_integration: ['Smart device integration:','AppLink', 'Radio data system'],
                 wireless_phone_connect: '',
-                am_fm: 'SiriusXM',
+                am_fm: 'AM/FM radio: SiriusXM',
                 primary_lcd_size: '',
                 first_row_lcd: '',
                 snd_row_lcd: '',
@@ -81,10 +81,10 @@ Vehicle.createCollection().then(function(collection){
             const SeatTrimExample = new SeatTrim ({
                 heated_seats: 'Heated front seats',
                 pwr_seats: '',
-                frnt_seats: 'bucket',
-                rear_seats: 'bench',
+                max_seating_capacity: 'Max seating capacity: 5',
+                frnt_seats: 'Front seats: bucket',
+                rear_seats: 'Rear seats: bench',
                 third_row_seats: '',
-                max_seating_capacity: 5,
                 other: ['Leather steering wheel', 'Front center armrest', 'Split folding rear seat'],
                 vehicle: vehicleExample._id
             })
@@ -98,13 +98,13 @@ Vehicle.createCollection().then(function(collection){
             console.log('SpecsDimen collection created');
         
             const SpecsDimenExample = new SpecsDimen ({
-                front_legroom: '973mm (38.3\")',
-                rear_legroom: '843mm (33.2\")',
+                front_legroom: 'Front headroom: 973mm (38.3\")',
+                rear_legroom: 'Rear legroom: 843mm (33.2\")',
                 third_row_headroom: '',
                 compression_ratio: '',
                 eng_horse_pwr: '',
-                ext_h: '1,466mm (57.7\")',
-                ext_l: '4,534mm (178.5\")',
+                ext_h: 'Exterior height: 1,466mm (57.7\")',
+                ext_l: 'Exterior length: 4,534mm (178.5\")',
                 vehicle: vehicleExample._id
             })
         

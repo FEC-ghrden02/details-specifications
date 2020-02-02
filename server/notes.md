@@ -22,9 +22,10 @@ Lighting, Visibility and Instrumentation
 psql - create db | pgAdmin
 <server_folder> - knex init 
 
-## *I THINK THAT THE LESS DATA MANIPULATION THE BETTER*
+## *I THINK THAT THE LESS DATA MANIPULATION ON THE CLIENT SIDE THE BETTER*
 
-### Alternatives to remove empty properties:
+### Alternatives to remove empty properties returned from DB:
+~~Maybe can be done through query~~
 
 Option#1 - Has a *SIDE EFFECT* and modifies the original object
 ```javascript
@@ -52,6 +53,7 @@ console.log('This is reformatted ', reformattedData);
 
 Option#3 - *TOO COMPLICATED* ~~Create default value for empty properties of undefined.~~
 
+Option#4 - Before rendering in the component create conditional statement to only show properties with value length > 0
 ### How to convert property value of typeof array into obj literals
 
 ### How can I hide unnecesary data from user?
