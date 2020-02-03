@@ -16,7 +16,7 @@ app.use(express.static(__dirname + '/../client/dist'));
 // route for GET /vehicles
 app.get ( '/api/vehicles', function (req, res) {
     // query to retrieve all documents in the vehicle collection
-    Vehicle.find( {}, function (err, docs){
+    Vehicle.find( {_id: '5e37b14684b0978b90649150'}, function (err, docs){
         res.json(docs);
     });
 });
@@ -24,31 +24,31 @@ app.get ( '/api/vehicles', function (req, res) {
 app.get ( '/api/convenience-specs', function (req, res) {
     console.log('Request recieved from React')
     // FIX: query to remove empty fields
-    ConvenienceFeature.find( {}, function (err, docs) {
+    ConvenienceFeature.find( {vehicle: '5e37b14684b0978b90649150'}, function (err, docs) {
         res.json(docs);
     });
 });
 
 app.get ( '/api/entretainment-specs', function (req, res) {
-    EntmtFeat.find( {}, function (err, docs) {
+    EntmtFeat.find( {vehicle: '5e37b14684b0978b90649150'}, function (err, docs) {
         res.json(docs);
     })
 });
 
 app.get ( '/api/off-road-specs', function (req, res) {
-    OffRoadCapability.find( {}, function (err, docs) {
+    OffRoadCapability.find( {vehicle: '5e37b14684b0978b90649150'}, function (err, docs) {
         res.json(docs);
     })
 });
 
 app.get( '/api/seat-trim-specs', function (req, res) {
-    SeatTrim.find( {}, function (err, docs) {
+    SeatTrim.find( {vehicle: '5e37b14684b0978b90649150'}, function (err, docs) {
         res.json(docs);
     })
 });
 
 app.get ( '/api/specs-dimensions', function (req, res) {
-    SpecsDimen.find( {}, function (err, docs) {
+    SpecsDimen.find( {vehicle: '5e37b14684b0978b90649150'}, function (err, docs) {
         res.json(docs);
     })
 })
