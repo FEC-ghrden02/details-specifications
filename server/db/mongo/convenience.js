@@ -3,6 +3,7 @@ var Schema = mongoose.Schema;
 var Vehicle = require('./vehicle');
 
 var ConvenienceFeatSchema = new Schema ({
+    one_tocuh_down_wnds: String,
     tilt_steering_wheel: String,
     telescoping_steering_wheel: String,
     ac: String,
@@ -11,9 +12,8 @@ var ConvenienceFeatSchema = new Schema ({
     spd_control: String,
     illuminated_entry: String,
     rear_bev_holder: String,
-    trunk_auto_latch: String,
     pwr_wnds: String,
-    one_tocuh_down_wnds: String,
+    trunk_auto_latch: String,
     emergency_comm_sys: String,
     remote_keyless_entry: String,
     vehicle: {

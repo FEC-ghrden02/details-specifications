@@ -8,7 +8,7 @@ var SeatTrimSchema = new Schema ({
     frnt_seats: String,
     rear_seats: String,
     third_row_seats: String,
-    max_seating_capacity: Number,
+    max_seating_capacity: String,
     other: [String],
     vehicle: {
         type: Schema.Types.ObjectId,
