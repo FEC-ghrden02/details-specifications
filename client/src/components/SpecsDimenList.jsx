@@ -30,7 +30,7 @@ const SpecsDimenList = (props) => {
   return (
     <div className="specs-and-dimensions">
       <h4>Specs and Dimensions</h4>
-      <ul className="details list-unstlyled">
+      <ul className="details list-unstyled">
         {specsDimenComponents}
       </ul>
     </div>
