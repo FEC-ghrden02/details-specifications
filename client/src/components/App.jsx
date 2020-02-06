@@ -35,7 +35,7 @@ class App extends React.Component {
     this.onClickHandleDiv();
   }
   getConvenienceDetails(){
-    fetch('http://localhost:4000/api/convenience-specs')
+    fetch('http://localhost:3003/api/convenience-specs')
     .then((response) => {
       console.log('This is convenience response ', response);
       return response.json()
@@ -51,7 +51,7 @@ class App extends React.Component {
     })
   }
   getEntretainmentDetails(){
-    fetch('http://localhost:4000/api/entretainment-specs')
+    fetch('http://localhost:3003/api/entretainment-specs')
       .then((response) => {
         console.log('This is entretainment response ', response);
         return response.json();
@@ -68,7 +68,7 @@ class App extends React.Component {
   }
   
   getOffRoadDetails(){
-    fetch('http://localhost:4000/api/off-road-specs')
+    fetch('http://localhost:3003/api/off-road-specs')
       .then((response) => {
         console.log('This is off-road response ', response);
         return response.json();
@@ -84,7 +84,7 @@ class App extends React.Component {
   }
   
   getSeatTrimDetails(){
-    fetch('http://localhost:4000/api/seat-trim-specs')
+    fetch('http://localhost:3003/api/seat-trim-specs')
       .then((response) => {
         console.log('This is seat-trim response', response);
         return response.json();
@@ -99,7 +99,7 @@ class App extends React.Component {
       })
   }
   getSpecsDimenDetails(){
-    fetch('http://localhost:4000/api/specs-dimensions')
+    fetch('http://localhost:3003/api/specs-dimensions')
       .then((response) => {
         console.log('This is specs-dimensions response ', response);
         return response.json();

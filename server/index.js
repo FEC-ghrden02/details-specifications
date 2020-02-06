@@ -12,6 +12,7 @@ const SpecsDimen = require('./db/mongo/specsDimen');
 
 // directory for static files
 app.use(express.static(__dirname + '/../client/dist'));
+app.use(cors());
 
 // route for GET /vehicles
 app.get ( '/api/vehicles', function (req, res) {
@@ -54,5 +55,5 @@ app.get ( '/api/specs-dimensions', function (req, res) {
 })
 
 // connection to localhost
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3003;
 app.listen(PORT, () => console.log(`server running on port: ${PORT}`))
