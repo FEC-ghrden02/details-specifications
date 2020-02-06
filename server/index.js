@@ -9,6 +9,7 @@ const EntmtFeat = require('./db/mongo/entretainment');
 const OffRoadCapability = require('./db/mongo/offRoad');
 const SeatTrim = require('./db/mongo/seatTrim');
 const SpecsDimen = require('./db/mongo/specsDimen');
+const cors = require('cors');
 
 // directory for static files
 app.use(express.static(__dirname + '/../client/dist'));
