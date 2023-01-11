@@ -16,7 +16,7 @@
     "dotenv": "^8.2.0",
     "eslint-config-airbnb": "^18.0.1",
     "express": "^4.17.1",
-    "knex": "^0.20.8",
+    "knex": "^2.4.0",
     "lodash": "^4.17.15",
     "mongoose": "^5.8.9",
     "pg": "^7.17.1",
